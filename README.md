@@ -1,8 +1,10 @@
-# Hiring Funnel Analytics
+# Funnel Disparity Stats — two-proportion z-test + 4/5ths-rule screening
 
-![CI](https://github.com/Jott2121/hiring-funnel-analytics/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/Jott2121/funnel-disparity-stats/actions/workflows/ci.yml/badge.svg)
 
-Recruiting funnel performance, conversion analysis, and diversity impact monitoring. End-to-end analytics a People Analytics team delivers to the CHRO every quarter: stage-to-stage conversion, source effectiveness, time-to-fill, and statistically rigorous demographic pass-rate monitoring.
+Method-first: a reusable pipeline for detecting statistically significant pass-rate gaps between groups at each stage of a multi-step funnel — a two-proportion z-test with a pooled standard error, plus a null-effect sanity check to confirm it doesn't fire on noise. The same screen that EEOC adverse-impact analysis (the 4/5ths / 80% rule) is built to catch.
+
+The worked application here is a hiring funnel: recruiting funnel performance, conversion analysis, and demographic pass-rate monitoring. End-to-end analytics a People Analytics team delivers to the CHRO every quarter: stage-to-stage conversion, source effectiveness, time-to-fill, and statistically rigorous demographic pass-rate monitoring.
 
 **[Live dashboard →](https://hiring-funnel-analytics-jotterson.streamlit.app/)** (no install required)
 
@@ -291,7 +293,7 @@ This project is structured as a decision-support tool, not a production system. 
 Part of a People Analytics portfolio covering workforce planning, recruiting, compensation equity, and retention. Companion repositories:
 
 - [workforce-planning-demand-forecast](https://github.com/Jott2121/workforce-planning-demand-forecast) — strategic workforce planning and recruiter capacity
-- [compensation-equity-analysis](https://github.com/Jott2121/compensation-equity-analysis) — regression-based pay equity audit
-- [hr-attrition-predictor](https://github.com/Jott2121/hr-attrition-predictor) — responsible retention risk modeling
+- [pay-equity-regression](https://github.com/Jott2121/pay-equity-regression) — regression-based pay equity audit
+- [attrition-risk-ml](https://github.com/Jott2121/attrition-risk-ml) — responsible retention risk modeling
 
 Maintainer: [Jeff Otterson](https://github.com/Jott2121). Libraries: `pandas`, `scipy`, `streamlit`, `plotly`. MIT licensed.

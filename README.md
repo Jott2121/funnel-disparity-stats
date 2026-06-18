@@ -1,6 +1,8 @@
 # Funnel Disparity Stats — two-proportion z-test + 4/5ths-rule screening
 
 ![CI](https://github.com/Jott2121/funnel-disparity-stats/actions/workflows/ci.yml/badge.svg)
+![CodeQL](https://github.com/Jott2121/funnel-disparity-stats/actions/workflows/codeql.yml/badge.svg)
+![Coverage](https://raw.githubusercontent.com/Jott2121/funnel-disparity-stats/python-coverage-comment-action-data/badge.svg)
 
 Method-first: a reusable pipeline for detecting statistically significant pass-rate gaps between groups at each stage of a multi-step funnel — a two-proportion z-test with a pooled standard error, plus a null-effect sanity check to confirm it doesn't fire on noise. The same screen that EEOC adverse-impact analysis (the 4/5ths / 80% rule) is built to catch.
 
@@ -297,3 +299,13 @@ Part of a People Analytics portfolio covering workforce planning, recruiting, co
 - [attrition-risk-ml](https://github.com/Jott2121/attrition-risk-ml) — responsible retention risk modeling
 
 Maintainer: [Jeff Otterson](https://github.com/Jott2121). Libraries: `pandas`, `scipy`, `streamlit`, `plotly`. MIT licensed.
+
+## Reliability & security
+
+This repo is gated like production:
+
+- **Coverage-gated tests** — the analytical core (`src/`, excluding plotting/export glue) is unit-tested and the build fails if coverage drops below the floor (currently 80% on the core).
+- **CodeQL** — `security-extended` static analysis on every push, PR, and weekly; findings surface in the Security tab.
+- **Pinned supply chain** — GitHub Actions pinned to commit SHAs, kept current by Dependabot.
+- **Protected `main`** — required checks must pass before a merge; private vulnerability reporting is enabled.
+- **Disclosure policy** — see [SECURITY.md](SECURITY.md).
